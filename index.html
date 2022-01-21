@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrays - Ejercicio</title>
+</head>
+<body>
+    <h1>arrays - Ejercicio</h1>
+
+    <p>Recorrer todo el array de colores y cargar dentro del contenedor, un párrafo para cada color, el cual debe mostrarle al usuario el nombre del color, como así también que el color de su tipografía utilice dicho color</p>
+
+    <div id="container"></div>
+
+    <style>
+body{background-color: rgb(144, 156, 145);}
+#red{color:red ;}
+
+#a822{color:#822 ;}
+
+#pink{color:pink ;}
+
+#white{color: white ;}
+
+#black{color: black ;}
+
+#orange{color:orange ;}
+
+#a37a{color:#37a ;}
+
+#blue{color:blue;}
+
+#tomato{color:tomato;}
+
+#silver{color:silver;}
+
+#lightcyan{color:lightcyan;}
+
+#magenta{color:magenta;}
+
+#rebeccapurple{color:rebeccapurple;}
+
+    </style>
+
+    <script>
+
+        var _container = document.getElementById('container')
+        // _container.innerHTML = 'hola'
+        // _container.innerHTML += '<strong>hola</strong>'
+        // _container.innerHTML += '<p>un párrafo</p>'
+        // _container.innerHTML += '<p title="título!">otro párrafo (este tiene title)</p>'
+
+        //              0      1       2       3        4        5         6
+        var colores = ['red', 'a822', 'pink', 'white', 'black', 'orange', 'a37a']
+
+        colores.push('blue')                                    // 7
+        colores.push('tomato')                                  // 8
+        colores.push('silver')                                  // 9
+        colores.push('lightcyan', 'magenta', 'rebeccapurple')   // 10, 11, 12
+        
+        for (var i = 0; i < colores.length; i++) { 
+                    _container.innerHTML += `<p id="${colores[i]}">${colores[i]}</p>`
+
+            console.log(i, colores[i])
+        }
+        console.warn('-----')
+
+        
+        var ultimoElemento = colores.pop()
+        console.log('Elemento extraído (del final):', ultimoElemento)
+
+        for (i = 0; i < colores.length; i++) {
+            console.log(i, colores[i])
+        
+        }
+        console.warn('-----')
+        
+        
+        var primerElemento = colores.shift()
+        console.log('Elemento extraído (del principio)', primerElemento)
+        for (i = 0; i < colores.length; i++) {
+            console.log(i, colores[i])
+        }
+        console.warn('-----')
+
+        colores.unshift('brown')
+        colores.unshift('darkslateblue')
+        colores.unshift('darkgrey', 'orchid')
+        for (i = 0; i < colores.length; i++) {
+            console.log(i, colores[i])
+        }
+
+        ``
+
+    </script>
+</body>
+</html>
